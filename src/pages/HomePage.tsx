@@ -910,6 +910,59 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
+      {/* 11 — LOCAL COVERAGE & FREQUENTLY ASKED QUESTIONS (Vijayawada & AP) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8" aria-labelledby="faq-heading">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-wider text-blue-400 block mb-1">
+              Vijayawada · Guntur · Amaravati · Andhra Pradesh
+            </span>
+            <h2 id="faq-heading" className="font-display text-2xl sm:text-4xl font-bold text-white tracking-tight">
+              FREQUENTLY ASKED QUESTIONS
+            </h2>
+          </div>
+          <span className="text-xs text-slate-400">VR Sessions, School STEM &amp; On-Site Event Support</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="p-6 rounded-2xl bg-[#0B101A] border border-slate-800 space-y-2">
+            <h3 className="font-display text-base font-bold text-white">
+              What is the ticket price for VR games at PDVR Gaming in Vijayawada?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Individual VR sessions start at ₹100 for 360° rides (Roller Coaster, Santa Ride, Henry), ₹150 for interactive action games (Beat Saber, Iron Man VR, Cricket, Boxing), and ₹300 for 15+ minute Educational STEM VR modules.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#0B101A] border border-slate-800 space-y-2">
+            <h3 className="font-display text-base font-bold text-white">
+              Does PDVR Gaming provide VR setups for birthday parties, apartments &amp; schools?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Yes. We deliver fully staffed mobile VR arenas across Vijayawada, Guntur, Amaravati, and Mangalagiri for apartment clubhouses, school STEM workshops, tech expos, and private birthday celebrations.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#0B101A] border border-slate-800 space-y-2">
+            <h3 className="font-display text-base font-bold text-white">
+              What age groups can enjoy PDVR Gaming VR experiences?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Our commercial-grade 90Hz+ VR headsets and simulator setups are suitable for ages 4 to 65, with trained on-site technicians guiding every player safely.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-[#0B101A] border border-slate-800 space-y-2">
+            <h3 className="font-display text-base font-bold text-white">
+              Which cities and timings does PDVR Gaming operate in?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              We operate daily from 8:00 AM to 10:00 PM across Vijayawada, Guntur, Amaravati, Tenali, Eluru, and nearby venues across Andhra Pradesh. Call or WhatsApp +91 9133020759 for bookings.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 12 — FINAL CALL TO ACTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <motion.div
