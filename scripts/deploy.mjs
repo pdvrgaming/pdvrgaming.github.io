@@ -19,6 +19,9 @@ fs.writeFileSync(path.join(tmpDeployDir, '.nojekyll'), '');
 if (fs.existsSync('README.md')) {
   fs.copyFileSync('README.md', path.join(tmpDeployDir, 'README.md'));
 }
+if (fs.existsSync('vr-banner.svg')) {
+  fs.copyFileSync('vr-banner.svg', path.join(tmpDeployDir, 'vr-banner.svg'));
+}
 
 const remoteUrl = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
 execSync('git init -b main', { cwd: tmpDeployDir, stdio: 'inherit' });
@@ -29,3 +32,4 @@ execSync('git push -f origin main', { cwd: tmpDeployDir, stdio: 'inherit' });
 
 fs.rmSync(tmpDeployDir, { recursive: true, force: true });
 console.log('Deployed dist/ cleanly to origin/main!');
+

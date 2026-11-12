@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Deep Cyber Arcade Sky Gradient -->
+    <linearGradient id="vrSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050714" />
+      <stop offset="38%" stop-color="#13093A" />
+      <stop offset="72%" stop-color="#07223B" />
+      <stop offset="100%" stop-color="#050816" />
+    </linearGradient>
+
+    <!-- Neon Rainbow Gradient (Cyan -> Violet -> Magenta -> Amber) -->
+    <linearGradient id="rainbowNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4">
+        <animate attributeName="stop-color" values="#06B6D4;#8B5CF6;#EC4899;#06B6D4" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#EC4899">
+        <animate attributeName="stop-color" values="#EC4899;#06B6D4;#F59E0B;#EC4899" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#F59E0B">
+        <animate attributeName="stop-color" values="#F59E0B;#EC4899;#8B5CF6;#F59E0B" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Text Title Cyber Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="48%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F472B6" />
+    </linearGradient>
+
+    <!-- Holographic Visor Gradient -->
+    <linearGradient id="visorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <!-- Sweeping Light Beam -->
+    <linearGradient id="beamSweep" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0" />
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </linearGradient>
+
+    <clipPath id="clipFrame">
+      <rect x="0" y="0" width="1200" height="400" rx="24" />
+    </clipPath>
+  </defs>
+
+  <!-- Main Canvas -->
+  <rect width="1200" height="400" rx="24" fill="url(#vrSky)" />
+
+  <!-- Colorful Ambient Nebulas -->
+  <circle cx="190" cy="180" r="190" fill="#06B6D4" opacity="0.14" />
+  <circle cx="620" cy="70" r="220" fill="#8B5CF6" opacity="0.16" />
+  <circle cx="1040" cy="210" r="185" fill="#EC4899" opacity="0.14" />
+
+  <!-- Synthwave Perspective Horizon Grid -->
+  <g clip-path="url(#clipFrame)" opacity="0.24" stroke="#8B5CF6" stroke-width="1">
+    <line x1="0" y1="265" x2="1200" y2="265" stroke="url(#rainbowNeon)" stroke-width="2" />
+    <line x1="0" y1="295" x2="1200" y2="295" />
+    <line x1="0" y1="330" x2="1200" y2="330" />
+    <line x1="0" y1="370" x2="1200" y2="370" />
+    <line x1="600" y1="265" x2="150" y2="400" />
+    <line x1="600" y1="265" x2="360" y2="400" />
+    <line x1="600" y1="265" x2="520" y2="400" />
+    <line x1="600" y1="265" x2="680" y2="400" />
+    <line x1="600" y1="265" x2="840" y2="400" />
+    <line x1="600" y1="265" x2="1050" y2="400" />
+  </g>
+
+  <!-- Animated Holographic Scan Beam -->
+  <g clip-path="url(#clipFrame)">
+    <rect x="-320" y="0" width="280" height="400" fill="url(#beamSweep)">
+      <animate attributeName="x" values="-320;1360" dur="6.5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Floating Animated Energy Particles -->
+  <g>
+    <circle cx="340" cy="75" r="3" fill="#22D3EE">
+      <animate attributeName="cy" values="75;62;75" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="880" cy="82" r="3.5" fill="#F472B6">
+      <animate attributeName="cy" values="82;66;82" dur="4.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1110" cy="115" r="2.8" fill="#FBBF24">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="965" cy="145" r="2.5" fill="#34D399">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Top Telemetry Ribbon -->
+  <g transform="translate(80, 44)">
+    <circle cx="0" cy="0" r="5" fill="#10B981">
+      <animate attributeName="r" values="4.5;6.5;4.5" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="16" y="4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="800" letter-spacing="2" fill="#22D3EE">
+      VR ARCADE · STEM LABS · FULL-STACK &amp; PWA ENGINEERING
+    </text>
+    <text x="1040" y="4" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="800" letter-spacing="1.5" fill="#F472B6">
+      VIJAYAWADA · ANDHRA PRADESH
+    </text>
+  </g>
+
+  <!-- Colorful Cyber Hexagon VR Headset Emblem -->
+  <g transform="translate(80, 96)">
+    <!-- Outer Rotating Aura Ring -->
+    <circle cx="72" cy="72" r="78" fill="none" stroke="url(#rainbowNeon)" stroke-width="2" stroke-dasharray="18 10" opacity="0.65">
+      <animateTransform attributeName="transform" type="rotate" from="0 72 72" to="360 72 72" dur="24s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Hexagon Container -->
+    <polygon points="72,6 132,39 132,105 72,138 12,105 12,39" fill="#0B112B" stroke="url(#rainbowNeon)" stroke-width="3.5" />
+
+    <!-- VR Headset Vector -->
+    <rect x="30" y="45" width="84" height="48" rx="14" fill="url(#visorGrad)" />
+    <rect x="36" y="51" width="72" height="36" rx="10" fill="#060B1E" opacity="0.45" />
+    <!-- Glowing Visor Reflection -->
+    <path d="M 44 76 L 62 56 L 76 56 L 58 76 Z" fill="#FFFFFF" opacity="0.35" />
+    <path d="M 44 69 Q 58 58 72 69 T 100 69" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.45;1;0.45" dur="2s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Bold Title & Colorful Tagline -->
+  <g transform="translate(262, 148)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <text font-size="56" font-weight="900" letter-spacing="3.5" fill="url(#titleGrad)">
+      PDVR GAMING
+    </text>
+    <text y="38" font-size="20" font-weight="700" fill="#E2E8F0">
+      Immersive VR Games, 360° Simulators &amp; Creative Web Software
+    </text>
+    <text y="68" font-size="14.5" font-weight="600" fill="#A5F3FC">
+      Commercial VR Arenas · School STEM 3D Labs · React/TypeScript · Offline PWAs
+    </text>
+  </g>
+
+  <!-- Colorful Feature Pills -->
+  <g transform="translate(80, 304)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">
+    <!-- Pill 1: Arcade Pink -->
+    <g transform="translate(0, 0)">
+      <rect width="196" height="44" rx="12" fill="#4C0519" stroke="#EC4899" stroke-width="2" />
+      <text x="98" y="27" text-anchor="middle">🎢 360° Rides &amp; VR Games</text>
+    </g>
+    <!-- Pill 2: Violet STEM -->
+    <g transform="translate(212, 0)">
+      <rect width="204" height="44" rx="12" fill="#2E1065" stroke="#8B5CF6" stroke-width="2" />
+      <text x="102" y="27" text-anchor="middle">🚀 School STEM 3D Labs</text>
+    </g>
+    <!-- Pill 3: Cyan Dev -->
+    <g transform="translate(432, 0)">
+      <rect width="208" height="44" rx="12" fill="#083344" stroke="#06B6D4" stroke-width="2" />
+      <text x="104" y="27" text-anchor="middle">💻 React · TS · Offline PWAs</text>
+    </g>
+    <!-- Pill 4: Emerald Health -->
+    <g transform="translate(656, 0)">
+      <rect width="186" height="44" rx="12" fill="#022C22" stroke="#10B981" stroke-width="2" />
+      <text x="93" y="27" text-anchor="middle">🏥 MEDIC Health PWA</text>
+    </g>
+    <!-- Pill 5: Amber Contact -->
+    <g transform="translate(858, 0)">
+      <rect width="182" height="44" rx="12" fill="#451A03" stroke="#F59E0B" stroke-width="2" />
+      <text x="91" y="27" text-anchor="middle">🌐 pdvrgaming.github.io</text>
+    </g>
+  </g>
+
+  <!-- Outer Neon Gradient Border -->
+  <rect x="2" y="2" width="1196" height="396" rx="23" fill="none" stroke="url(#rainbowNeon)" stroke-width="2.5" opacity="0.75" />
+</svg>
