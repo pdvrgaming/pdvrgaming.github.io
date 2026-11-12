@@ -66,10 +66,13 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, onOpen
             <img
               src={pdvrLogo}
               alt="PDVR Gaming Logo"
-              className="w-8 h-8 rounded-full object-cover border border-blue-500/40 shadow-sm"
+              className="w-9 h-9 rounded-full object-cover ring-2 ring-cyan-400/50 shadow-md shadow-cyan-500/20"
             />
-            <span className="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-blue-400 transition-colors">
-              PDVR<span className="text-blue-500 font-bold ml-1">GAMING</span>
+            <span className="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-cyan-300 transition-colors">
+              PDVR
+              <span className="font-bold ml-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent">
+                GAMING
+              </span>
             </span>
           </div>
         </button>

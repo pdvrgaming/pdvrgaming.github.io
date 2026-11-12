@@ -21,10 +21,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               <img
                 src={pdvrLogo}
                 alt="PDVR Gaming Logo"
-                className="w-8 h-8 rounded-full object-cover border border-blue-500/40 shadow-sm"
+                className="w-9 h-9 rounded-full object-cover ring-2 ring-cyan-400/50 shadow-md shadow-cyan-500/20"
               />
               <span className="font-display font-extrabold text-xl tracking-wider text-white">
-                PDVR<span className="text-blue-500 font-bold ml-1">GAMING</span>
+                PDVR
+                <span className="font-bold ml-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent">
+                  GAMING
+                </span>
               </span>
             </div>
             <p className="text-slate-400 max-w-sm leading-relaxed text-sm">
