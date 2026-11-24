@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://pdvrgaming.github.io/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://pdvrgaming.github.io/og-banner.jpg</image:loc>
+      <image:title>PDVR Gaming - Virtual Reality Gaming &amp; 360 Simulators in Vijayawada</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pdvrgaming.github.io/pdvr_logo.png</image:loc>
+      <image:title>PDVR Gaming Official Brand Logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pdvrgaming.github.io/medic/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://pdvrgaming.github.io/medic/banner.svg</image:loc>
+      <image:title>MEDIC - Offline-First Family Medicine Routine &amp; Inventory Guardian</image:title>
+    </image:image>
+  </url>
+</urlset>
