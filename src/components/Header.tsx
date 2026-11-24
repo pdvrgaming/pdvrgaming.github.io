@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, PhoneCall, ShieldCheck } from 'lucide-react';
+import { Menu, X, PhoneCall, ShieldCheck, QrCode } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import pdvrLogo from '@/src/assets/images/pdvr_logo.png';
 
@@ -98,8 +98,21 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, onOpen
           })}
         </nav>
 
-        {/* Zone 3: Primary Action & Control Panel shortcut */}
+        {/* Zone 3: Primary Action, Digital Card & Control Panel shortcut */}
         <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={() => onNavigate('card')}
+            className={`px-3 py-2 text-xs font-semibold rounded-md transition-all flex items-center gap-1.5 focus:outline-none border shadow-sm ${
+              currentRoute === 'card'
+                ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/60 ring-2 ring-cyan-500/30 font-bold'
+                : 'text-cyan-400 hover:text-cyan-200 bg-cyan-950/40 hover:bg-cyan-900/60 border-cyan-800/60'
+            }`}
+            title="Open PDVR Digital Visiting Card & QR Scanner"
+          >
+            <QrCode className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Digital Card</span>
+          </button>
+
           <button
             onClick={() => onNavigate('c-panel')}
             className="px-3 py-2 text-xs font-medium text-slate-400 hover:text-slate-200 border border-slate-800 hover:border-slate-700 rounded-md transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
@@ -158,7 +171,19 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, onOpen
               );
             })}
             
-            <div className="pt-3 border-t border-slate-800/80">
+            <div className="pt-3 border-t border-slate-800/80 space-y-2">
+              <button
+                onClick={() => handleNavClick('card')}
+                className={`w-full text-left text-xs py-3 px-3 rounded-lg flex items-center gap-2.5 border transition-colors ${
+                  currentRoute === 'card'
+                    ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50 font-bold'
+                    : 'text-cyan-400 hover:text-white bg-cyan-950/40 border-cyan-800/60 font-semibold'
+                }`}
+              >
+                <QrCode className="w-4 h-4 text-cyan-400 shrink-0" />
+                <span>Digital Visiting Card & QR (Scan & Save Contact)</span>
+              </button>
+
               <button
                 onClick={() => handleNavClick('c-panel')}
                 className="w-full text-left text-xs text-slate-400 hover:text-white py-3 px-3 rounded-lg flex items-center gap-2.5 bg-slate-900/60 border border-slate-800/60"

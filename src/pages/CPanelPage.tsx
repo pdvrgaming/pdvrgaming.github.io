@@ -1288,11 +1288,41 @@ export const CPanelPage: React.FC<CPanelPageProps> = ({ onBackToSite }) => {
             <div className="p-6 rounded-xl bg-[#0D121D] border border-slate-800 space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                 <div>
-                  <label className="block text-slate-400 mb-1">Business Name</label>
+                  <label className="block text-slate-400 mb-1">Business / Firm Name</label>
                   <input
                     type="text"
                     value={siteForm.businessName}
                     onChange={(e) => setSiteForm({ ...siteForm, businessName: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-400 mb-1">Contact Person / Owner Name (for E-Card & vCard)</label>
+                  <input
+                    type="text"
+                    value={siteForm.ownerName || ''}
+                    placeholder="e.g. Pradeep / Founder"
+                    onChange={(e) => setSiteForm({ ...siteForm, ownerName: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-400 mb-1">Professional Title / Role</label>
+                  <input
+                    type="text"
+                    value={siteForm.ownerTitle || ''}
+                    placeholder="e.g. Founder & Lead VR Operator"
+                    onChange={(e) => setSiteForm({ ...siteForm, ownerTitle: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-400 mb-1">Official Website URL</label>
+                  <input
+                    type="url"
+                    value={siteForm.websiteUrl || ''}
+                    placeholder="https://pdvrgaming.github.io/"
+                    onChange={(e) => setSiteForm({ ...siteForm, websiteUrl: e.target.value })}
                     className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white"
                   />
                 </div>
@@ -1323,7 +1353,7 @@ export const CPanelPage: React.FC<CPanelPageProps> = ({ onBackToSite }) => {
                     className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white"
                   />
                 </div>
-                <div className="sm:col-span-2">
+                <div>
                   <label className="block text-slate-400 mb-1">Operating Hours</label>
                   <input
                     type="text"
@@ -1343,11 +1373,21 @@ export const CPanelPage: React.FC<CPanelPageProps> = ({ onBackToSite }) => {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-800 flex justify-end">
+              <div className="pt-3 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <a
+                  href="#/card"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-1.5"
+                >
+                  <span>Preview Live Digital Card & QR Code</span>
+                  <span>&rarr;</span>
+                </a>
+
                 <button
                   onClick={() => {
                     updateSettings(siteForm);
-                    showNotify('Business settings saved successfully!');
+                    showNotify('Business & E-Card settings saved successfully!');
                   }}
                   className="px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-colors"
                 >

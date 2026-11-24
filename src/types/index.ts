@@ -88,6 +88,9 @@ export interface Testimonial {
 export interface SiteSettings {
   businessName: string;
   brandTagline: string;
+  ownerName?: string;
+  ownerTitle?: string;
+  websiteUrl?: string;
   email: string;
   phone: string;
   whatsapp: string;

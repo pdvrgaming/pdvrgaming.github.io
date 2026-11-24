@@ -685,6 +685,9 @@ export const INITIAL_TESTIMONIALS: Testimonial[] = [
 export const INITIAL_SETTINGS: SiteSettings = {
   businessName: 'PDVR Gaming',
   brandTagline: 'Virtual Reality Gaming Experience',
+  ownerName: 'PDVR Gaming',
+  ownerTitle: 'Founder & Lead VR Operator',
+  websiteUrl: 'https://pdvrgaming.github.io/',
   email: 'gamingpdvr@gmail.com',
   phone: '+91 9133020759',
   whatsapp: '919133020759',

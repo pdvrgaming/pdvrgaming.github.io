@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Users, HeartHandshake, Phone, Mail } from 'lucide-react';
+import { Cpu, Users, HeartHandshake, Phone, Mail, QrCode } from 'lucide-react';
 import { useData } from '../context/DataContext';
 
 interface AboutPageProps {
@@ -78,12 +78,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
           </div>
         </div>
 
-        <button
-          onClick={onOpenBooking}
-          className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-colors shrink-0 shadow-sm"
-        >
-          Book An Event Quote
-        </button>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+          <a
+            href="#/card"
+            className="px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 font-semibold text-xs transition-colors flex items-center justify-center gap-2 border border-slate-700 shadow-sm"
+          >
+            <QrCode className="w-4 h-4 text-cyan-400" />
+            <span>Digital E-Card & QR</span>
+          </a>
+
+          <button
+            onClick={onOpenBooking}
+            className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-colors shadow-sm text-center"
+          >
+            Book An Event Quote
+          </button>
+        </div>
       </div>
     </div>
   );

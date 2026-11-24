@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Clock, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, ShieldCheck, ArrowUpRight, QrCode } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import pdvrLogo from '@/src/assets/images/pdvr_logo.png';
 
@@ -190,6 +190,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
                 <span>{settings.location}</span>
               </div>
+              <div className="pt-2">
+                <button
+                  onClick={() => onNavigate('card')}
+                  className="px-3 py-1.5 rounded-lg bg-cyan-950/60 hover:bg-cyan-900/80 border border-cyan-800/70 text-cyan-300 hover:text-cyan-200 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+                >
+                  <QrCode className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>Digital Visiting Card & QR</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -198,6 +207,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} PDVR GAMING. All rights reserved.</p>
           <div className="flex items-center gap-6">
+            <button
+              onClick={() => onNavigate('card')}
+              className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors flex items-center gap-1"
+            >
+              <QrCode className="w-3 h-3 text-cyan-400" />
+              <span>Digital E-Card</span>
+            </button>
             <button
               onClick={() => onNavigate('about')}
               className="hover:text-slate-300 transition-colors"

@@ -15,6 +15,7 @@ import { EventsPage } from './pages/EventsPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { AboutPage } from './pages/AboutPage';
 import { CPanelPage } from './pages/CPanelPage';
+import { DigitalCardPage } from './pages/DigitalCardPage';
 
 import { Experience, GalleryItem } from './types';
 
@@ -43,6 +44,9 @@ export default function App() {
         const slug = rawHash.replace('experiences/', '');
         setCurrentRoute('experience-detail');
         setActiveExperienceSlug(slug);
+      } else if (['card', 'ecard', 'digital-card'].includes(rawHash)) {
+        setCurrentRoute('card');
+        setActiveExperienceSlug('');
       } else if (['experiences', 'pricing', 'events', 'gallery', 'about'].includes(rawHash)) {
         setCurrentRoute(rawHash);
         setActiveExperienceSlug('');
@@ -67,6 +71,7 @@ export default function App() {
       events: 'Mobile VR Events, School STEM & Birthday Setups — PDVR Gaming',
       gallery: 'Action Gallery & Event Showcase — PDVR Gaming Vijayawada',
       about: 'About PDVR Gaming — Commercial VR & STEM Technology in Andhra Pradesh',
+      card: 'Digital Visiting Card & QR Contact — PDVR Gaming Vijayawada',
       'c-panel': 'PDVR Gaming — Operational Control Panel',
     };
     if (currentRoute === 'experience-detail' && activeExperienceSlug) {
@@ -154,6 +159,13 @@ export default function App() {
             <AboutPage onOpenBooking={() => handleOpenBooking(undefined, 'event')} />
           )}
 
+          {currentRoute === 'card' && (
+            <DigitalCardPage
+              onNavigate={navigateTo}
+              onOpenBooking={() => handleOpenBooking(undefined, 'custom')}
+            />
+          )}
+
           {currentRoute === 'c-panel' && (
             <CPanelPage onBackToSite={() => navigateTo('home')} />
           )}
@@ -168,7 +180,10 @@ export default function App() {
 
         {/* Mobile Quick Action Bar */}
         {!isCPanel && (
-          <MobileQuickBar onOpenBooking={() => handleOpenBooking()} />
+          <MobileQuickBar
+            onOpenBooking={() => handleOpenBooking()}
+            onNavigate={navigateTo}
+          />
         )}
 
         {/* Global Modals */}

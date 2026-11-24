@@ -1,12 +1,13 @@
 import React from 'react';
-import { Calendar, MessageSquare, Phone } from 'lucide-react';
+import { Calendar, MessageSquare, Phone, QrCode } from 'lucide-react';
 import { useData } from '../context/DataContext';
 
 interface MobileQuickBarProps {
   onOpenBooking: () => void;
+  onNavigate?: (route: string) => void;
 }
 
-export const MobileQuickBar: React.FC<MobileQuickBarProps> = ({ onOpenBooking }) => {
+export const MobileQuickBar: React.FC<MobileQuickBarProps> = ({ onOpenBooking, onNavigate }) => {
   const { settings } = useData();
 
   return (
@@ -22,15 +23,25 @@ export const MobileQuickBar: React.FC<MobileQuickBarProps> = ({ onOpenBooking })
         <span>Book Session</span>
       </button>
 
+      <button
+        onClick={() => onNavigate?.('card')}
+        className="min-h-[44px] py-2.5 px-3 rounded-xl bg-cyan-950/70 active:bg-cyan-900 border border-cyan-800/70 text-cyan-300 font-semibold text-xs flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all"
+        title="Open Digital Visiting Card & QR"
+        aria-label="Open Digital Card"
+      >
+        <QrCode className="w-4 h-4 text-cyan-400 shrink-0" />
+        <span>E-Card</span>
+      </button>
+
       <a
         href={`https://wa.me/${settings.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi PDVR GAMING, I want to book an experience or ask about an event.')}`}
         target="_blank"
         rel="noreferrer"
-        className="min-h-[44px] py-2.5 px-3.5 rounded-xl bg-emerald-600 active:bg-emerald-700 text-white font-semibold text-xs flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all"
+        className="min-h-[44px] py-2.5 px-3 rounded-xl bg-emerald-600 active:bg-emerald-700 text-white font-semibold text-xs flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all"
         aria-label="Chat on WhatsApp"
       >
         <MessageSquare className="w-4 h-4 shrink-0" />
-        <span>WhatsApp</span>
+        <span className="hidden xs:inline">WhatsApp</span>
       </a>
 
       <a
